@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Parabens, Wilma!',
-  description: 'Uma homenagem interativa de aniversario para Wilma.',
+  title: 'Parabéns, Wilma!',
+  description: 'Uma homenagem interativa de aniversário para Wilma.',
 };
 
 export default function RootLayout({
