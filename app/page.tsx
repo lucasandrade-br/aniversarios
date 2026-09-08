@@ -367,7 +367,7 @@ function PhotoFrame({
             </p>
             <p className="mt-2 max-w-64 text-xs font-medium leading-5 text-zinc-600 sm:mt-3 sm:text-sm sm:leading-6">
               {finalMode
-                ? 'Tela final pronta para receber a melhor foto da aniversariante.'
+                ? 'Te desejamos um excelente aniversário.'
                 : imageHint}
             </p>
           </div>
@@ -434,7 +434,7 @@ function Finale({
             PIX gigante liberado
           </p>
           <p className="text-[clamp(2.25rem,12vw,4.75rem)] font-black leading-none tracking-normal text-rose-700">
-            R$ 900,00
+            R$ 800,00
           </p>
           <p className="mt-2 text-sm font-bold text-zinc-700 sm:text-base">
             Presente aprovado para a aniversariante!
