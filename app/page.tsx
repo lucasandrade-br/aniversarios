@@ -49,14 +49,14 @@ const questions: Question[] = [
   {
     title: 'Você é casada com esse galã?',
     imageLabel: 'Foto do casal',
-    imageHint: 'Coloque a foto em public/images/casal.jpg',
+    imageHint: 'Coloque a foto em public/images/casal.jpeg',
     yesReaction: 'Confirmado: casal oficial da celebração.',
     noReaction: 'Negar esse galã em público? Audacioso.',
   },
   {
     title: 'Você é essa mulher maravilhosa da foto?',
     imageLabel: 'Foto da Wilma',
-    imageHint: 'Coloque a foto em public/images/wilma.jpg',
+    imageHint: 'Coloque a foto em public/images/wilma.jpeg',
     yesReaction: 'Sem dúvidas. Elegância reconhecida.',
     noReaction: 'O sistema detectou modéstia em excesso.',
   },
@@ -70,7 +70,7 @@ const questions: Question[] = [
   {
     title: 'Você está fazendo aniversário hoje?',
     imageLabel: 'Aniversário da Wilma',
-    imageHint: 'Coloque a foto em public/images/aniversario.jpg',
+    imageHint: 'Coloque a foto em public/images/aniversario.jpeg',
     yesReaction: 'Agora sim. Pode preparar o sorriso.',
     noReaction: 'Hoje é sim. O calendário está do nosso lado.',
   },
@@ -78,10 +78,10 @@ const questions: Question[] = [
 
 const imagePaths = [
   '/images/filhos.jpg',
-  '/images/casal.jpg',
-  '/images/wilma.jpg',
+  '/images/casal.jpeg',
+  '/images/wilma.jpeg',
   '/images/genro.jpg',
-  '/images/aniversario.jpg',
+  '/images/aniversario.jpeg',
 ];
 
 export default function Home() {
@@ -203,7 +203,7 @@ export default function Home() {
     register({
       name: 'reveal_birthday_pix',
       title: 'Reveal birthday Pix',
-      description: 'Reveal the R$ 900,00 birthday Pix prize on the final screen.',
+      description: 'Reveal the R$ 800,00 birthday Pix prize on the final screen.',
       inputSchema: {
         type: 'object',
         properties: {},
@@ -219,7 +219,7 @@ export default function Home() {
 
         return {
           pixRevealed: true,
-          prize: 'R$ 900,00',
+          prize: 'R$ 800,00',
         };
       },
     });
