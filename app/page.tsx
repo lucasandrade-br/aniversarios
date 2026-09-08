@@ -401,7 +401,7 @@ function Finale({
         envolvido e uma conclusão inevitável: hoje é dia de celebrar você.
       </p>
 
-      <div className="mt-3 rounded-[1.25rem] border border-rose-200 bg-white/80 p-4 shadow-xl shadow-rose-100 backdrop-blur sm:mt-7 sm:rounded-[1.5rem] sm:p-5">
+      <div className="mt-3 w-full max-w-[640px] rounded-[1.25rem] border border-rose-200 bg-white/80 p-4 shadow-xl shadow-rose-100 backdrop-blur sm:mt-7 sm:rounded-[1.5rem] sm:p-5">
         <div className="flex items-start gap-3 sm:gap-4">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-rose-600 text-white sm:size-12">
             <Gift className="size-5 sm:size-6" aria-hidden="true" />
@@ -411,10 +411,10 @@ function Finale({
               Alerta de presente
             </p>
             <p className="mt-1 text-xl font-black tracking-normal text-zinc-950 sm:text-2xl">
-              Seu PIX gigante está pronto.
+              O presente da aniversariante foi aprovado.
             </p>
             <p className="mt-1.5 text-sm leading-6 text-zinc-600 sm:mt-2 sm:text-base sm:leading-7">
-              Falta só apertar o botão mais importante da festa.
+              Agora falta só tocar no botão para liberar o PIX gigante.
             </p>
           </div>
         </div>
@@ -422,14 +422,14 @@ function Finale({
 
       {!pixRevealed ? (
         <Button
-          className="pix-button mt-3 h-12 w-full rounded-2xl bg-zinc-950 px-6 text-base font-black text-white hover:bg-zinc-800 sm:mt-7 sm:h-14 sm:w-auto"
+          className="pix-button mt-3 h-12 w-full max-w-[640px] rounded-2xl bg-zinc-950 px-6 text-base font-black text-white hover:bg-zinc-800 sm:mt-4 sm:h-14"
           onClick={onRevealPix}
         >
           <Sparkles className="size-5" aria-hidden="true" />
           RECEBER PIX
         </Button>
       ) : (
-        <div className="pix-prize mt-3 rounded-[1.25rem] border-2 border-amber-300 bg-amber-50 px-5 py-4 text-center shadow-2xl shadow-amber-200 sm:mt-7 sm:inline-block sm:px-8 sm:py-5">
+        <div className="pix-prize mt-3 w-full max-w-[640px] rounded-[1.25rem] border-2 border-amber-300 bg-amber-50 px-5 py-4 text-center shadow-2xl shadow-amber-200 sm:mt-4 sm:px-8 sm:py-5">
           <p className="text-sm font-black uppercase text-amber-800">
             PIX gigante liberado
           </p>

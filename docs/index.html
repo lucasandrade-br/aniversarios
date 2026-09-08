@@ -232,6 +232,15 @@
         gap: 10px;
       }
 
+      .actions.final-actions {
+        display: flex;
+        width: 100%;
+        max-width: 640px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
       button {
         min-height: 48px;
         min-width: 0;
@@ -300,8 +309,9 @@
       }
 
       .gift {
+        width: 100%;
         max-width: 640px;
-        margin-top: 12px;
+        margin-top: 0;
         gap: 12px;
         align-items: flex-start;
         border: 1px solid var(--line);
@@ -331,7 +341,6 @@
       }
 
       .pix-button {
-        grid-column: 1 / -1;
         margin-top: 0;
         background: var(--ink);
         color: white;
@@ -339,7 +348,7 @@
       }
 
       .pix-prize {
-        grid-column: 1 / -1;
+        width: 100%;
         border: 2px solid #fcd34d;
         border-radius: 20px;
         background: #fffbeb;
@@ -527,6 +536,12 @@
           gap: 14px;
         }
 
+        .actions.final-actions {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 14px;
+        }
+
         button {
           min-height: 56px;
           min-width: 170px;
@@ -557,7 +572,7 @@
         }
 
         .gift {
-          margin-top: 28px;
+          margin-top: 0;
           gap: 18px;
           border-radius: 24px;
           padding: 22px;
@@ -573,14 +588,12 @@
           font-size: clamp(24px, 4vw, 34px);
         }
 
-        .pix-button,
-        .pix-prize {
-          grid-column: auto;
-          margin-top: 0;
+        .actions.final-actions .pix-button {
+          width: 100%;
+          min-width: 0;
         }
 
         .pix-prize {
-          display: inline-block;
           padding: 20px 32px;
         }
       }
@@ -719,6 +732,7 @@
         counter.textContent = isFinal ? "Final liberado" : `${step + 1} de ${questions.length}`;
 
         if (isFinal) {
+          actions.classList.add("final-actions");
           const yesCount = answers.filter((answer) => answer === "yes").length;
           questionNumber.textContent = "Resultado oficial";
           title.textContent = "Parabéns, Wilma!";
@@ -728,8 +742,8 @@
               <div class="gift-icon" aria-hidden="true">$</div>
               <div>
                 <p class="eyebrow">Alerta de presente</p>
-                <strong>Seu PIX gigante está pronto.</strong>
-                <p class="placeholder-hint">Falta só apertar o botão mais importante da festa.</p>
+                <strong>O presente da aniversariante foi aprovado.</strong>
+                <p class="placeholder-hint">Agora falta só tocar no botão para liberar o PIX gigante.</p>
               </div>
             </div>
             ${
@@ -749,11 +763,11 @@
               render();
             });
           }
-          setPlaceholder("Wilma", "Tela final pronta para receber a melhor foto da aniversariante.", true);
           return;
         }
 
         const current = questions[step];
+        actions.classList.remove("final-actions");
         questionNumber.textContent = `Pergunta ${step + 1}`;
         title.textContent = current.title;
         reactionEl.textContent = reaction;
