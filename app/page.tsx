@@ -56,7 +56,7 @@ const questions: Question[] = [
   {
     title: 'Você é essa mulher maravilhosa da foto?',
     imageLabel: 'Foto da Wilma',
-    imageHint: 'Coloque a foto em public/images/wilma.jpeg',
+    imageHint: 'Coloque a foto em public/images/wilma.png',
     yesReaction: 'Sem dúvidas. Elegância reconhecida.',
     noReaction: 'O sistema detectou modéstia em excesso.',
   },
@@ -77,11 +77,11 @@ const questions: Question[] = [
 ];
 
 const imagePaths = [
-  '/images/filhos.jpg',
-  '/images/casal.jpeg',
-  '/images/wilma.jpeg',
-  '/images/genro.jpg',
-  '/images/aniversario.jpeg',
+  '/images/filhos.jpg?v=20260908-2',
+  '/images/casal.jpeg?v=20260908-2',
+  '/images/wilma.png?v=20260908-2',
+  '/images/genro.jpg?v=20260908-2',
+  '/images/aniversario.jpeg?v=20260908-2',
 ];
 
 export default function Home() {
